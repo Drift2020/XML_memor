@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.IO;
 namespace MemoreNET
 {
-    abstract public class Memore
+    abstract public class Storage
     {
-        public Memore()
+        public Storage()
         {
             Name = null;
             ManufacturerName = null;
@@ -16,7 +16,7 @@ namespace MemoreNET
             Size = 0;
             Price = 0;
         }
-        public Memore(string Name, string ManufacturerName, string Model, int Size, int Price)
+        public Storage(string Name, string ManufacturerName, string Model, int Size, int Price)
         {
             this.Name = Name;
             this.ManufacturerName = ManufacturerName;
@@ -50,7 +50,7 @@ namespace MemoreNET
             get;
         }
 
-        public virtual void Print()
+        public virtual void Print(Log Obj)
         {
             Console.WriteLine("1.Name: {0}", Name);
             Console.WriteLine("2.Manufacturer name: {0}", ManufacturerName);
@@ -59,7 +59,7 @@ namespace MemoreNET
             Console.WriteLine("5.Price: {0}", Price);
            
         }
-        public virtual void Load(BinaryReader reader, string Name)
+        public virtual void Load(Log Obj)
         {
             this.Name = Name;
             ManufacturerName = reader.ReadString();
@@ -67,7 +67,7 @@ namespace MemoreNET
             Size = reader.ReadInt32();
             Price = reader.ReadInt32();
         }
-        public virtual void Save(BinaryWriter writer)
+        public virtual void Save(Log Obj)
         {
             //FileStream file = new FileStream("1.txt", FileMode.Create, FileAccess.Write);
             //BinaryWriter writer = new BinaryWriter(file);                   

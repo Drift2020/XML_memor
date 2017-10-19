@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MemoreNET
 {
-    class Interfase
+    class Start
     {
         public static void Main()
         {
-            Control cont=new Control();
+            Iterfase cont=new Iterfase();
             int Number = 0;
             cont.Load();
             cont.PrintMenu();

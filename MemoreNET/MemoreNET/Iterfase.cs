@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using System.IO;
 namespace MemoreNET
 {
-    class Control
+    class Iterfase
     {
-        public List<Memore> OBJ;
-        public Control()
-        {
 
-            OBJ = new List<Memore>();
+        List_of_Storage OBJ;
+        public Iterfase()
+        {
+            OBJ = new List_of_Storage();
         }
 
         public void selection()
@@ -38,9 +38,9 @@ namespace MemoreNET
             Console.Write("Enter speed USB: ");
             int SpeedUSB = Convert.ToInt32(Console.ReadLine());
 
-            Memore p = new USB("USB", ManufacturerName, Model, quantity, Price, SizeUSB, SpeedUSB);
+            Storage p = new USB("USB", ManufacturerName, Model, quantity, Price, SizeUSB, SpeedUSB);
 
-            OBJ.Add(p);
+            OBJ.list.Add(p);
         }
         void add_dvd()
         {
@@ -58,7 +58,7 @@ namespace MemoreNET
             Console.Write("Enter spead save: ");
             int SpeadSave = Convert.ToInt32(Console.ReadLine());
 
-            Memore p = new DVD("DVD", ManufacturerName, Model, quantity, Price, Speadload, SpeadSave);
+            Storage p = new DVD("DVD", ManufacturerName, Model, quantity, Price, Speadload, SpeadSave);
             OBJ.Add(p);
         }
         void add_hdd()
@@ -77,7 +77,7 @@ namespace MemoreNET
             Console.Write("Enter spead save: ");
             int SpeedHDD = Convert.ToInt32(Console.ReadLine());
 
-            Memore p = new HDD("HDD", ManufacturerName, Model, quantity, Price, SizeP, SpeedHDD);
+            Storage p = new HDD("HDD", ManufacturerName, Model, quantity, Price, SizeP, SpeedHDD);
             OBJ.Add(p);
         }
         public void add()
@@ -120,7 +120,7 @@ namespace MemoreNET
         public void Print()
         {
             int i = 1;
-            foreach (Memore P in OBJ)
+            foreach (Storage P in OBJ)
             {
                 Console.WriteLine(i++);
                 P.Print();
@@ -741,7 +741,7 @@ namespace MemoreNET
                 case 1:
                   
                   
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if(P is USB)
                         {                      
@@ -757,7 +757,7 @@ namespace MemoreNET
                 case 2:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is USB)
                         {
@@ -774,7 +774,7 @@ namespace MemoreNET
                 case 3:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is USB)
                         {
@@ -791,7 +791,7 @@ namespace MemoreNET
                 case 4:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is USB)
                         {
@@ -808,7 +808,7 @@ namespace MemoreNET
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is USB)
                         {
@@ -825,7 +825,7 @@ namespace MemoreNET
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is USB)
                         {
@@ -843,7 +843,7 @@ namespace MemoreNET
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());                 
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is USB)
                         {
@@ -882,7 +882,7 @@ namespace MemoreNET
                 case 1:
                   
 
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -898,7 +898,7 @@ namespace MemoreNET
                 case 2:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -915,7 +915,7 @@ namespace MemoreNET
                 case 3:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -932,7 +932,7 @@ namespace MemoreNET
                 case 4:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -949,7 +949,7 @@ namespace MemoreNET
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -966,7 +966,7 @@ namespace MemoreNET
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -984,7 +984,7 @@ namespace MemoreNET
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is HDD)
                         {
@@ -1023,7 +1023,7 @@ namespace MemoreNET
                 case 1:
                   
 
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1039,7 +1039,7 @@ namespace MemoreNET
                 case 2:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1056,7 +1056,7 @@ namespace MemoreNET
                 case 3:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1073,7 +1073,7 @@ namespace MemoreNET
                 case 4:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1090,7 +1090,7 @@ namespace MemoreNET
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1107,7 +1107,7 @@ namespace MemoreNET
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1125,7 +1125,7 @@ namespace MemoreNET
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Memore P in OBJ)
+                    foreach (Storage P in OBJ)
                     {
                         if (P is DVD)
                         {
@@ -1174,7 +1174,7 @@ namespace MemoreNET
             FileStream file = new FileStream("1.txt", FileMode.Create, FileAccess.Write);
             BinaryWriter writer = new BinaryWriter(file);
             writer.Write(OBJ.Count+1);
-            foreach (Memore P in OBJ)
+            foreach (Storage P in OBJ)
             {
                 P.Save(writer);
             }
@@ -1189,7 +1189,7 @@ namespace MemoreNET
             {
 
                 int size = reader.ReadInt32();
-                Memore p;
+                Storage p;
                 for (int i = 0; i < size - 1 && size > 0; i++)
                 {
                     string LOAD = reader.ReadString();

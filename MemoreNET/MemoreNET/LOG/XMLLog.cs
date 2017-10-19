@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace MemoreNET
 {
-    class List_of_Storage
+    class XMLLog : Log
     {
-       public List<Storage> list;
-       public List_of_Storage()
+       public void Print()
        {
-            list = new List<Storage>();
-       }
 
+       }
     }
 }

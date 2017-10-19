@@ -39,8 +39,9 @@
     <Compile Include="Control.cs" />
     <Compile Include="DVD.cs" />
     <Compile Include="HDD.cs" />
-    <Compile Include="Memore.cs" />
-    <Compile Include="Start.cs" />
+    <Compile Include="List_of_Storage.cs" />
+    <Compile Include="Storage.cs" />
+    <Compile Include="Interfase.cs" />
     <Compile Include="USB.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

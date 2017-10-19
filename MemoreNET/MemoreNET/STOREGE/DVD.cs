@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 namespace MemoreNET
 {
-    class DVD : Memore
+    class DVD : Storage
     {
         public int Speadload{get;set;}
         public int SpeadSave{get;set;}
