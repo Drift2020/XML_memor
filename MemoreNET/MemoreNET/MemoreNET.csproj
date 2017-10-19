@@ -36,13 +36,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control.cs" />
-    <Compile Include="DVD.cs" />
-    <Compile Include="HDD.cs" />
+    <Compile Include="LOG\ConsoleLog.cs" />
+    <Compile Include="Iterfase.cs" />
+    <Compile Include="STOREGE\DVD.cs" />
+    <Compile Include="LOG\FileLog.cs" />
+    <Compile Include="STOREGE\HDD.cs" />
     <Compile Include="List_of_Storage.cs" />
-    <Compile Include="Storage.cs" />
-    <Compile Include="Interfase.cs" />
-    <Compile Include="USB.cs" />
+    <Compile Include="LOG\Log.cs" />
+    <Compile Include="STOREGE\Storage.cs" />
+    <Compile Include="Start.cs" />
+    <Compile Include="STOREGE\USB.cs" />
+    <Compile Include="LOG\XMLLog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

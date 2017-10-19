@@ -8,6 +8,6 @@ namespace MemoreNET
 {
     interface Log
     {
-        public void Print();
+        void Print();
     }
 }

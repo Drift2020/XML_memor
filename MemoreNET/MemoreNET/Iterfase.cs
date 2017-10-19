@@ -59,7 +59,7 @@ namespace MemoreNET
             int SpeadSave = Convert.ToInt32(Console.ReadLine());
 
             Storage p = new DVD("DVD", ManufacturerName, Model, quantity, Price, Speadload, SpeadSave);
-            OBJ.Add(p);
+            OBJ.list.Add(p);
         }
         void add_hdd()
         {
@@ -78,7 +78,7 @@ namespace MemoreNET
             int SpeedHDD = Convert.ToInt32(Console.ReadLine());
 
             Storage p = new HDD("HDD", ManufacturerName, Model, quantity, Price, SizeP, SpeedHDD);
-            OBJ.Add(p);
+            OBJ.list.Add(p);
         }
         public void add()
         {
