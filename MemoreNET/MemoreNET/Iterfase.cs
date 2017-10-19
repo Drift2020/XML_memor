@@ -21,6 +21,7 @@ namespace MemoreNET
             Console.WriteLine("1.USB\n2.HDD\n3.DVD\n");
         }
 
+#region ADD
         void add_usb()
         {
 
@@ -107,6 +108,8 @@ namespace MemoreNET
                     break;
             }
         }
+#endregion
+
 
         public void PrintMenu()
         {
@@ -128,7 +131,7 @@ namespace MemoreNET
             }
             Console.WriteLine("7.Menu");
         }
-
+#region EDIT
         void EditStart()
         {
             Console.WriteLine("What  pararam you edits?");
@@ -395,7 +398,8 @@ namespace MemoreNET
                 Console.WriteLine("ERROR value");
             }
         }
-
+        #endregion
+#region DELL
         void SelectCriterDelite()
         {
             Console.WriteLine("1.Type");
@@ -713,7 +717,8 @@ namespace MemoreNET
                     return;
             }
         }
-
+        #endregion
+#region SERCH
         void SerchStart()
         {
             Console.WriteLine("What  pararam you serch?");
@@ -1168,7 +1173,7 @@ namespace MemoreNET
             }
             Console.WriteLine("7.Menu");
         }
-
+#endregion
         public void Save()
         {
             FileStream file = new FileStream("1.txt", FileMode.Create, FileAccess.Write);
