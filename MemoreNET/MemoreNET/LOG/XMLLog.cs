@@ -8,7 +8,7 @@ namespace MemoreNET
 {
     class XMLLog : Log
     {
-       public void Print()
+       public void Print(string s)
        {
 
        }

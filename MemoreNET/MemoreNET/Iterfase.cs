@@ -22,64 +22,62 @@ namespace MemoreNET
         }
 
 #region ADD
-        void add_usb()
-        {
-
-            Console.Write("Enter Name producer: ");
-            string ManufacturerName = Console.ReadLine();
-            Console.Write("Enter Model: ");
-            string Model = Console.ReadLine();
-            Console.Write("Enter quantity: ");
-            int quantity = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter Price");
-            int Price = Convert.ToInt32(Console.ReadLine());
-
+        void add_usb(string manufacturerName, string model, int quantity, int price)
+        {      
             Console.Write("Enter Size USB: ");
-            int SizeUSB = Convert.ToInt32(Console.ReadLine());
+            int sizeUSB = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter speed USB: ");
-            int SpeedUSB = Convert.ToInt32(Console.ReadLine());
+            int speedUSB = Convert.ToInt32(Console.ReadLine());
 
-            Storage p = new USB("USB", ManufacturerName, Model, quantity, Price, SizeUSB, SpeedUSB);
+           
 
-            OBJ.list.Add(p);
+            OBJ.Add("USB",manufacturerName,  model,  quantity,  price, sizeUSB, speedUSB);
         }
-        void add_dvd()
+        void add_dvd(string manufacturerName, string model, int quantity, int price)
         {
-            Console.Write("Enter Name producer: ");
-            string ManufacturerName = Console.ReadLine();
-            Console.Write("Enter Model: ");
-            string Model = Console.ReadLine();
-            Console.Write("Enter quantity: ");
-            int quantity = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter Price: ");
-            int Price = Convert.ToInt32(Console.ReadLine());
-
+           
             Console.Write("Enter spead load: ");
-            int Speadload = Convert.ToInt32(Console.ReadLine());
+            int speadload = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter spead save: ");
-            int SpeadSave = Convert.ToInt32(Console.ReadLine());
+            int speadSave = Convert.ToInt32(Console.ReadLine());
 
-            Storage p = new DVD("DVD", ManufacturerName, Model, quantity, Price, Speadload, SpeadSave);
-            OBJ.list.Add(p);
+           
+            OBJ.Add("DVD",manufacturerName, model, quantity, price, speadload, speadSave);
         }
-        void add_hdd()
+        void add_hdd(string manufacturerName, string model, int quantity, int price)
         {
-            Console.Write("Enter Name producer: ");
-            string ManufacturerName = Console.ReadLine();
-            Console.Write("Enter Model: ");
-            string Model = Console.ReadLine();
-            Console.Write("Enter quantity: ");
-            int quantity = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter Price: ");
-            int Price = Convert.ToInt32(Console.ReadLine());
+          
 
             Console.Write("Enter size load: ");
-            int SizeP = Convert.ToInt32(Console.ReadLine());
+            int sizeP = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter spead save: ");
-            int SpeedHDD = Convert.ToInt32(Console.ReadLine());
+            int speedHDD = Convert.ToInt32(Console.ReadLine());
+            
+            OBJ.Add("HDD",manufacturerName, model, quantity, price, sizeP, speedHDD);
+        }
+        void add_stor(int number)
+        {
+            Console.Write("Enter Name producer: ");
+            string manufacturerName = Console.ReadLine();
+            Console.Write("Enter Model: ");
+            string model = Console.ReadLine();
+            Console.Write("Enter quantity: ");
+            int quantity = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Price: ");
+            int price = Convert.ToInt32(Console.ReadLine());
 
-            Storage p = new HDD("HDD", ManufacturerName, Model, quantity, Price, SizeP, SpeedHDD);
-            OBJ.list.Add(p);
+            if(number==1)
+            {
+                add_usb(manufacturerName, model, quantity, price);
+            }
+            else if(number==2)
+            {
+                add_hdd(manufacturerName, model, quantity, price);
+            }
+            else if(number==3)
+            {
+                add_dvd(manufacturerName, model, quantity, price);
+            }
         }
         public void add()
         {
@@ -91,19 +89,19 @@ namespace MemoreNET
                 case 1://USB
 
                     Console.Clear();
-                    add_usb();
+                    add_stor(number);
 
                     break;
                 case 2://HDD
 
                     Console.Clear();
-                    add_hdd();
+                    add_stor(number);
 
                     break;
                 case 3://DVD
 
                     Console.Clear();
-                    add_dvd();
+                    add_stor(number);
 
                     break;
             }
@@ -122,14 +120,14 @@ namespace MemoreNET
         }
         public void Print()
         {
-            int i = 1;
-            foreach (Storage P in OBJ)
-            {
-                Console.WriteLine(i++);
-                P.Print();
-                Console.WriteLine();
-            }
-            Console.WriteLine("7.Menu");
+            //int i = 1;
+            //foreach (Storage P in OBJ)
+            //{
+            //    Console.WriteLine(i++);
+            //    P.Print();
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine("7.Menu");
         }
 #region EDIT
         void EditStart()

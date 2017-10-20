@@ -50,7 +50,7 @@ namespace MemoreNET
             get;
         }
 
-        public virtual void Print(Log Obj)
+        public virtual void Print(ILog Obj)
         {
             Console.WriteLine("1.Name: {0}", Name);
             Console.WriteLine("2.Manufacturer name: {0}", ManufacturerName);
@@ -59,24 +59,7 @@ namespace MemoreNET
             Console.WriteLine("5.Price: {0}", Price);
            
         }
-        public virtual void Load(Log Obj)
-        {
-            this.Name = Name;
-            ManufacturerName = reader.ReadString();
-            Model = reader.ReadString();
-            Size = reader.ReadInt32();
-            Price = reader.ReadInt32();
-        }
-        public virtual void Save(Log Obj)
-        {
-            //FileStream file = new FileStream("1.txt", FileMode.Create, FileAccess.Write);
-            //BinaryWriter writer = new BinaryWriter(file);                   
-            writer.Write(Name);
-            writer.Write(ManufacturerName);
-            writer.Write(Model);
-            writer.Write(Size);
-            writer.Write(Price);
-        }
+        
     }
 }
 

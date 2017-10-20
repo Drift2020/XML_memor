@@ -27,17 +27,6 @@ namespace MemoreNET
             Console.WriteLine("6.Size USB: {0}", SizeUSB);
             Console.WriteLine("7.Speed USB: {0}", SpeedUSB);
         }
-        public override void Load(BinaryReader reader, string Name)
-        {
-            base.Load(reader,  Name);
-            SizeUSB = reader.ReadInt32();
-            SpeedUSB = reader.ReadInt32();
-        }
-        public override void Save(BinaryWriter writer)
-        {
-            base.Save(writer);
-            writer.Write(SizeUSB);
-            writer.Write(SpeedUSB);
-        }
+       
     }
 }

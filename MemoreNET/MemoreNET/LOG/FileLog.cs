@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MemoreNET
 {
-    class FileLog
+    class FileLog : Log
     {
+        public void Print(string s)
+        {
+
+        }
     }
 }
