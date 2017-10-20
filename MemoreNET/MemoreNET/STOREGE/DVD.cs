@@ -30,17 +30,6 @@ namespace MemoreNET
             Console.WriteLine("6.Spead load: {0}", Speadload);
             Console.WriteLine("7.Spead save: {0}", SpeadSave);
         }
-        public override void Load(BinaryReader reader, string Name)
-        {
-            base.Load(reader,  Name);
-            Speadload = reader.ReadInt32();
-            SpeadSave = reader.ReadInt32();
-        }
-        public override void Save(BinaryWriter writer)
-        {
-            base.Save(writer);
-            writer.Write(Speadload);
-            writer.Write(SpeadSave);
-        }
+      
     }
 }

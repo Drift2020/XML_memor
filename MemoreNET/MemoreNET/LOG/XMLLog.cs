@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MemoreNET
 {
-    class XMLLog : Log
+    class XMLLog : ILog
     {
        public void Print(string s)
        {

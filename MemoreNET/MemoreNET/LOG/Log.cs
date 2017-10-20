@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MemoreNET
 {
-    interface Log
+    interface ILog
     {
         void Print(string s);
     }

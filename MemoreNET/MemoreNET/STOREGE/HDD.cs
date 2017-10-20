@@ -30,17 +30,6 @@ namespace MemoreNET
             Console.WriteLine("6.Size: {0}", SizeP);
             Console.WriteLine("7.Speed HDD: {0}", SpeedHDD);
         }
-        public override void Load(BinaryReader reader, string Name)
-        {
-            base.Load(reader,  Name);
-            SizeP = reader.ReadInt32();
-            SpeedHDD = reader.ReadInt32();
-        }
-        public override void Save(BinaryWriter writer)
-        {
-            base.Save(writer);
-            writer.Write(SizeP);
-            writer.Write(SpeedHDD);
-        }
+       
     }
 }
