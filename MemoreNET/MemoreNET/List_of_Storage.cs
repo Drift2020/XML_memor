@@ -16,18 +16,43 @@ namespace MemoreNET
 
         public void Add(string name, string manufacturerName, string model, int quantity, int price, int typeOne, int typeTry)
         {
-            if(name=="HDD")
+            Storage temp=null;
+            if (name=="HDD")
             {
-                Storage temp = new HDD(name, manufacturerName, model, quantity, price, typeOne, typeTry);
+                 temp = new HDD(name, manufacturerName, model, quantity, price, typeOne, typeTry);
             }
             else if(name=="USB")
             {
-
+                 temp = new USB(name, manufacturerName, model, quantity, price, typeOne, typeTry);
             }
             else if(name=="DVD")
             {
-
+                 temp = new DVD(name, manufacturerName, model, quantity, price, typeOne, typeTry);
             }
+            list.Add(temp);
+        }
+        public void Edit(int number,string name, string manufacturerName, string model, int quantity, int price, int typeOne, int typeTry)
+        {
+            if (name == "HDD")
+            {
+              
+            }
+            else if (name == "USB")
+            {
+               
+            }
+            else if (name == "DVD")
+            {
+              
+            }
+        }
+        public Storage PullElement(int number)
+        {
+            return list[number];
+        }
+        public int PullSize()
+        {
+            return list.Count;
         }
     }
 }

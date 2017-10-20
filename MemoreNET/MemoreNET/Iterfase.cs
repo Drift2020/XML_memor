@@ -138,7 +138,7 @@ namespace MemoreNET
             Console.WriteLine("3.Quantity");
             Console.WriteLine("4.Price");
         }
-        void EditUSB(USB P,int poz)
+        void EditUSB(int poz)
         {
             
             int number = 0;
@@ -212,7 +212,7 @@ namespace MemoreNET
                
             } while (true);
         }
-        void EditHDD(HDD P, int poz)
+        void EditHDD( int poz)
         {
 
             int number = 0;
@@ -289,11 +289,19 @@ namespace MemoreNET
                 catch (Exception ex) { Console.Clear(); Console.WriteLine(ex); }
             } while (true);
         }
-        void EditDVD(DVD P, int poz)
+        void EditDVD( int poz)
         {
-
             int number = 0;
             string temp = null;
+            
+            string name="DVD";
+            string manufacturerName=null;
+            string model=null;
+            int quantity;
+            int price;
+            int speadload;
+            int speadSave;
+            
             do
             {
                 try
@@ -310,32 +318,32 @@ namespace MemoreNET
                         case 1:
                             Console.Write("Please enter value: ");
                             temp = Console.ReadLine();
-                            P.ManufacturerName = temp;
+                            manufacturerName = temp;
                             break;
                         case 2:
                             Console.Write("Please enter value: ");
                             temp = Console.ReadLine();
-                            P.Model = temp;
+                            model = temp;
                             break;
                         case 3:
                             Console.Write("Please enter value: ");
                             number = Convert.ToInt32(Console.ReadLine());
-                            P.Size = number;
+                            quantity = number;
                             break;
                         case 4:
                             Console.Write("Please enter value: ");
                             number = Convert.ToInt32(Console.ReadLine());
-                            P.Size = number;
+                            price = number;
                             break;
                         case 5:
                             Console.Write("Please enter value: ");
                             number = Convert.ToInt32(Console.ReadLine());
-                            P.Speadload = number;
+                            speadload = number;
                             break;
                         case 6:
                             Console.Write("Please enter value: ");
                             number = Convert.ToInt32(Console.ReadLine());
-                            P.SpeadSave = number;
+                            speadSave = number;
                             break;
                         case 7:
                             do
@@ -346,7 +354,7 @@ namespace MemoreNET
                                 {
                                     case "Y":
                                     case "y":
-                                        OBJ[poz] = P;
+                                        OBJ.Edit(poz,name, manufacturerName, model,quantity,price,speadload,speadSave);
                                         return;
                                     case "N":
                                     case "n":
@@ -368,33 +376,55 @@ namespace MemoreNET
         }
         public void Edit(int number)
         {
-            if (number >= 1&&number< OBJ.Count+1)
+           
+            if (number >= 1 && number < OBJ.PullSize() + 1)
             {
                 number--;
-                if(OBJ[number] is USB)
+                if(OBJ.PullElement(number) is USB)
                 {
-                    USB P = OBJ[number] as USB;
-                    Console.Clear();
-                    EditUSB(P, number);
-                   
+                    EditUSB(number);
                 }
-                else if(OBJ[number] is HDD)
+                else if (OBJ.PullElement(number) is HDD)
                 {
-                    HDD P = OBJ[number] as HDD;
-                    Console.Clear();
-                    EditHDD(P, number);
+                    EditHDD(number);
                 }
-                else if (OBJ[number] is DVD)
+                else if (OBJ.PullElement(number) is DVD)
                 {
-                    DVD P = OBJ[number] as DVD;
-                    Console.Clear();
-                    EditDVD(P, number);
+                    EditDVD(number);
                 }
             }
             else
             {
-                Console.WriteLine("ERROR value");
+                throw new Exception("\nERROR, this valu incoreect.\n");
             }
+            //Edit(number);
+            //if (number >= 1&&number< OBJ.Count+1)
+            //{
+            //    number--;
+            //    if(OBJ[number] is USB)
+            //    {
+            //        USB P = OBJ[number] as USB;
+            //        Console.Clear();
+            //        EditUSB(P, number);
+
+            //    }
+            //    else if(OBJ[number] is HDD)
+            //    {
+            //        HDD P = OBJ[number] as HDD;
+            //        Console.Clear();
+            //        EditHDD(P, number);
+            //    }
+            //    else if (OBJ[number] is DVD)
+            //    {
+            //        DVD P = OBJ[number] as DVD;
+            //        Console.Clear();
+            //        EditDVD(P, number);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("ERROR value");
+            //}
         }
         #endregion
 #region DELL
