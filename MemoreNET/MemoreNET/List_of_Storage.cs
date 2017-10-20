@@ -18,7 +18,7 @@ namespace MemoreNET
         {
             if(name=="HDD")
             {
-
+                Storage temp = new HDD(name, manufacturerName, model, quantity, price, typeOne, typeTry);
             }
             else if(name=="USB")
             {
