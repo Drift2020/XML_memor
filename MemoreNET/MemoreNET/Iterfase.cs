@@ -132,10 +132,12 @@ namespace MemoreNET
             i=Int32.Parse(Console.ReadLine());
             switch (i) {
                 case 1:
+                    Console.Clear();
                     OBJ.Print(new ConsoleLog());
+
                     break;
                 case 2:
-
+                    OBJ.Print(new FileLog());
                     break;
                 case 3:
 

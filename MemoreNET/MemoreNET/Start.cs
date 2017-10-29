@@ -71,7 +71,11 @@ namespace MemoreNET
                         //Console.Clear();
                         //cont.PrintMenu();
                         break;
-                }
+                        default:
+                            Console.Clear();
+                            cont.PrintMenu();
+                            break;
+                    }
                 }catch (Exception ex) { Console.Clear(); Console.WriteLine(ex); }
         } while (true);
 
