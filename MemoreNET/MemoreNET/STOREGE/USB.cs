@@ -22,10 +22,11 @@ namespace MemoreNET
         public int SizeUSB { get; set; }
         public int SpeedUSB { get; set; }
 
-        public override void Print() {
-            base.Print();
-            Console.WriteLine("6.Size USB: {0}", SizeUSB);
-            Console.WriteLine("7.Speed USB: {0}", SpeedUSB);
+        public override void Print(ILog Obj) {
+            base.Print(Obj);
+            Obj.Print("6.Size USB: " + SizeUSB+ "\n7.Speed USB: "+ SpeedUSB);
+            //Console.WriteLine("6.Size USB: {0}", SizeUSB);
+            //Console.WriteLine("7.Speed USB: {0}", SpeedUSB);
         }
        
     }

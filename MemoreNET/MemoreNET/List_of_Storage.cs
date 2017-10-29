@@ -33,20 +33,27 @@ namespace MemoreNET
         }
         public void Edit(int number,string name, string manufacturerName, string model, int quantity, int price, int typeOne, int typeTry)
         {
-            if (name == "HDD")
-            {
+            //if ()
+            //{
               
-            }
-            else if (name == "USB")
-            {
+            //}
+            //else if ()
+            //{
                
-            }
-            else if (name == "DVD")
-            {
+            //}
+            //else if ()
+            //{
               
+            //}
+        }
+        public void Print(ILog log)
+        {
+            foreach(Storage i in list)
+            {
+                i.Print(log);
             }
         }
-        public Storage PullElement(int number)
+        public Storage PullElement (int number)
         {
             return list[number];
         }

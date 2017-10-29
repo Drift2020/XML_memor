@@ -10,7 +10,7 @@ namespace MemoreNET
     {
         public void Print(string s)
         {
-
+            Console.WriteLine(s);
         }
     }
 }

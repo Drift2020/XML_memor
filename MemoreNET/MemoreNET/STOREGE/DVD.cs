@@ -24,11 +24,12 @@ namespace MemoreNET
             this.SpeadSave = SpeadSave;
         }
 
-        public override void Print()
+        public override void Print(ILog Obj)
         {
-            base.Print();
-            Console.WriteLine("6.Spead load: {0}", Speadload);
-            Console.WriteLine("7.Spead save: {0}", SpeadSave);
+            base.Print(Obj);
+            Obj.Print("6.Spead load: " + Speadload + "\n7.Spead save: " + SpeadSave);
+            //Console.WriteLine("6.Spead load: {0}", Speadload);
+            //Console.WriteLine("7.Spead save: {0}", SpeadSave);
         }
       
     }

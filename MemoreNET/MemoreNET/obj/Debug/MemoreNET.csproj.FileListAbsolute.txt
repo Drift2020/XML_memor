@@ -25,3 +25,10 @@ E:\ЕКО-16-П3\Дз\NET\7\MemoreNET\MemoreNET\obj\Debug\MemoreNET.pdb
 H:\ЕКО-16-П3\Дз\NET\7\MemoreNET\MemoreNET\bin\Debug\MemoreNET.exe.config
 H:\ЕКО-16-П3\Дз\NET\7\MemoreNET\MemoreNET\obj\Debug\MemoreNET.exe
 H:\ЕКО-16-П3\Дз\NET\7\MemoreNET\MemoreNET\obj\Debug\MemoreNET.pdb
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\bin\Debug\MemoreNET.exe.config
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\bin\Debug\MemoreNET.exe
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\bin\Debug\MemoreNET.pdb
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\obj\Debug\MemoreNET.csprojResolveAssemblyReference.cache
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\obj\Debug\MemoreNET.csproj.CoreCompileInputs.cache
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\obj\Debug\MemoreNET.exe
+F:\uniti\Games\XML_memor\MemoreNET\MemoreNET\obj\Debug\MemoreNET.pdb

@@ -24,11 +24,12 @@ namespace MemoreNET
             this.SpeedHDD = SpeedHDD;
         }
 
-        public override void Print()
+        public override void Print(ILog Obj)
         {
-            base.Print();
-            Console.WriteLine("6.Size: {0}", SizeP);
-            Console.WriteLine("7.Speed HDD: {0}", SpeedHDD);
+            base.Print(Obj);
+            Obj.Print("6.Size: "+SizeP+ "\n7.Speed HDD: "+SpeedHDD);
+            //Console.WriteLine("6.Size: {0}", SizeP);
+            //Console.WriteLine("7.Speed HDD: {0}", SpeedHDD);
         }
        
     }

@@ -12,7 +12,7 @@ namespace MemoreNET
         {
             Iterfase cont=new Iterfase();
             int Number = 0;
-            cont.Load();
+           // cont.Load();
             cont.PrintMenu();
            
             do
@@ -25,10 +25,10 @@ namespace MemoreNET
                 {
                     case 1://add
 
-                        //Console.Clear();
-                        //cont.add();
-                        //Console.Clear();
-                        //cont.PrintMenu();
+                        Console.Clear();
+                        cont.add();
+                        Console.Clear();
+                        cont.PrintMenu();
 
                         break;
                     case 2://Dell
@@ -42,8 +42,8 @@ namespace MemoreNET
                         break;
                     case 3://print
 
-                        //Console.Clear();
-                        //cont.Print();
+                        Console.Clear();
+                        cont.Print();
 
                         break;
                     case 4://Edit
