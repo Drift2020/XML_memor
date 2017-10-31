@@ -13,7 +13,7 @@ namespace MemoreNET
         {
             StreamWriter sw = new StreamWriter("File.log", true);
             s=s.Replace("\n", "\r\n");
-            sw.WriteLine(s);
+            sw.WriteLine(s);        
             sw.Close();
         }
     }
