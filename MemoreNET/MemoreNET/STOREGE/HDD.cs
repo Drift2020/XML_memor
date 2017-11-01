@@ -27,7 +27,7 @@ namespace MemoreNET
         public override void Print(ILog Obj)
         {
             base.Print(Obj);
-            Obj.Print("6.Size: "+SizeP+ "\n7.Speed HDD: "+SpeedHDD);
+            Obj.Print("6.Size: "+SizeP+ "\n7.Speed HDD: "+SpeedHDD + "\n");
             //Console.WriteLine("6.Size: {0}", SizeP);
             //Console.WriteLine("7.Speed HDD: {0}", SpeedHDD);
         }

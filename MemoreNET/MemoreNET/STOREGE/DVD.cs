@@ -27,7 +27,7 @@ namespace MemoreNET
         public override void Print(ILog Obj)
         {
             base.Print(Obj);
-            Obj.Print("6.Spead load: " + Speadload + "\n7.Spead save: " + SpeadSave);
+            Obj.Print("6.Spead load: " + Speadload + "\n7.Spead save: " + SpeadSave+"\n");
             //Console.WriteLine("6.Spead load: {0}", Speadload);
             //Console.WriteLine("7.Spead save: {0}", SpeadSave);
         }

@@ -53,11 +53,7 @@ namespace MemoreNET
         public virtual void Print(ILog Obj)
         {
             Obj.Print("1.Name: "+ Name + "\n2.Manufacturer name: "+ManufacturerName + "\n3.Model: "+ Model + "\n4.Quantity: "+ Size + "\n5.Price: "+Price);
-            //Console.WriteLine("1.Name: {0}", Name);
-            //Console.WriteLine("2.Manufacturer name: {0}", ManufacturerName);
-            //Console.WriteLine("3.Model: {0}", Model);
-            //Console.WriteLine("4.Quantity: {0}", Size);
-            //Console.WriteLine("5.Price: {0}", Price);
+           
 
         }
         

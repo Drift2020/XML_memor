@@ -48,14 +48,15 @@ namespace MemoreNET
                         break;
                     case 4://Edit
 
-                       //Console.Clear();
-                       //cont.Print();
-                       //Console.WriteLine("What is the number to be changed to be changed ?:");
-                       //Number = Convert.ToInt32(Console.ReadLine());
-                       //cont.Edit(Number);
-                       // Console.Clear();
-                       // cont.PrintMenu();
-                        break;
+                            Console.Clear();
+                            cont.Print();
+                            Console.WriteLine("What is the number to be changed to be changed ?:");
+                            Number = Convert.ToInt32(Console.ReadLine());
+                            cont.Edit(Number);
+                            Console.Clear();
+                            cont.PrintMenu();
+
+                            break;
                     case 5://Search
                         //Console.Clear();
                         //cont.Serch();
