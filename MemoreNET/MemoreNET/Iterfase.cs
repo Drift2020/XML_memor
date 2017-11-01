@@ -168,6 +168,13 @@ namespace MemoreNET
 
             int number = 0;
             string temp = null;
+            
+            string manufacturerName = null;
+            string model = null;
+            int? quantity = null;
+            int? price = null;
+            int? sizeUSB = null;
+            int? speedUSB = null;
             do
             {
                 try
@@ -182,33 +189,33 @@ namespace MemoreNET
                     {
                         case 1:
                             Console.Write("Please enter value: ");
-                            temp = Console.ReadLine();
-                            OBJ.PullElement(number).ManufacturerName = temp;
+                            manufacturerName = Console.ReadLine();
+                           
                             break;
                         case 2:
                             Console.Write("Please enter value: ");
-                            temp = Console.ReadLine();
-                            P.Model = temp;
+                            model = Console.ReadLine();
+                           
                             break;
                         case 3:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            P.Size = number;
+                            quantity = Convert.ToInt32(Console.ReadLine());
+                         
                             break;
                         case 4:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            P.Size = number;
+                            price = Convert.ToInt32(Console.ReadLine());
+                          
                             break;
                         case 5:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            P.SizeUSB = number;
+                            sizeUSB = Convert.ToInt32(Console.ReadLine());
+                           
                             break;
                         case 6:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            P.SpeedUSB = number;
+                            speedUSB = Convert.ToInt32(Console.ReadLine());
+                          
                             break;
                         case 7:
                             do
@@ -219,7 +226,7 @@ namespace MemoreNET
                                 {
                                     case "Y":
                                     case "y":
-                                        OBJ[poz] = P;
+                                        OBJ.Edit(number,manufacturerName,model,quantity,price, sizeUSB, speedUSB);
                                         return;
                                     case "N":
                                     case "n":
@@ -266,33 +273,33 @@ namespace MemoreNET
 
                         case 1:
                             Console.Write("Please enter value: ");
-                            temp = Console.ReadLine();
-                            manufacturerName = temp;
+                            manufacturerName = Console.ReadLine();
+                           
                             break;
                         case 2:
                             Console.Write("Please enter value: ");
-                            temp = Console.ReadLine();
-                            model = temp;
+                            model = Console.ReadLine();
+                           
                             break;
                         case 3:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            quantity = number;
+                            quantity = Convert.ToInt32(Console.ReadLine());
+                            
                             break;
                         case 4:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            price = number;
+                            price = Convert.ToInt32(Console.ReadLine());
+                           
                             break;
                         case 5:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            sizeP = number;
+                            sizeP = Convert.ToInt32(Console.ReadLine());
+                            
                             break;
                         case 6:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            speedHDD = number;
+                            speedHDD = Convert.ToInt32(Console.ReadLine());
+                           
                             break;
                         case 7:
                             do
@@ -325,16 +332,16 @@ namespace MemoreNET
         }
         void EditDVD(int poz)
         {
-            int number = 0;
+           
             string temp = null;
 
-            string name = "DVD";
+            int? number = null;
             string manufacturerName = null;
             string model = null;
-            int quantity;
-            int price;
-            int speadload;
-            int speadSave;
+            int? quantity = null;
+            int? price = null;
+            int? speadload=0;
+            int? speadSave=0;
 
             do
             {
@@ -351,33 +358,33 @@ namespace MemoreNET
 
                         case 1:
                             Console.Write("Please enter value: ");
-                            temp = Console.ReadLine();
-                            manufacturerName = temp;
+                            manufacturerName = Console.ReadLine();
+                           
                             break;
                         case 2:
                             Console.Write("Please enter value: ");
-                            temp = Console.ReadLine();
-                            model = temp;
+                            model = Console.ReadLine();
+                          
                             break;
                         case 3:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            quantity = number;
+                            quantity = Convert.ToInt32(Console.ReadLine());
+                           
                             break;
                         case 4:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            price = number;
+                            price = Convert.ToInt32(Console.ReadLine());
+                           
                             break;
                         case 5:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            speadload = number;
+                            speadload = Convert.ToInt32(Console.ReadLine());
+                          
                             break;
                         case 6:
                             Console.Write("Please enter value: ");
-                            number = Convert.ToInt32(Console.ReadLine());
-                            speadSave = number;
+                            speadSave = Convert.ToInt32(Console.ReadLine());
+                          
                             break;
                         case 7:
                             do
@@ -388,7 +395,7 @@ namespace MemoreNET
                                 {
                                     case "Y":
                                     case "y":
-                                        OBJ.Edit(poz, name, manufacturerName, model, quantity, price, speadload, speadSave);
+                                        OBJ.Edit(poz, manufacturerName, model, quantity, price, speadload, speadSave);
                                         return;
                                     case "N":
                                     case "n":
@@ -429,36 +436,9 @@ namespace MemoreNET
             }
             else
             {
-                throw new Exception("\nERROR, this valu incoreect.\n");
+                throw new Exception("\nERROR, this value incoreect.\n");
             }
-            //Edit(number);
-            //if (number >= 1&&number< OBJ.Count+1)
-            //{
-            //    number--;
-            //    if(OBJ[number] is USB)
-            //    {
-            //        USB P = OBJ[number] as USB;
-            //        Console.Clear();
-            //        EditUSB(P, number);
-
-            //    }
-            //    else if(OBJ[number] is HDD)
-            //    {
-            //        HDD P = OBJ[number] as HDD;
-            //        Console.Clear();
-            //        EditHDD(P, number);
-            //    }
-            //    else if (OBJ[number] is DVD)
-            //    {
-            //        DVD P = OBJ[number] as DVD;
-            //        Console.Clear();
-            //        EditDVD(P, number);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("ERROR value");
-            //}
+            
         }
         #endregion
         //#region DELL

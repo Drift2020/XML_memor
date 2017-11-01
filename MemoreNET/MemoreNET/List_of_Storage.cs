@@ -66,8 +66,12 @@ namespace MemoreNET
                 if (price != null)
                     P.Price = price.Value;
 
-                P.SizeUSB = typeOne.Value;
-                P.SpeedUSB = typeTry.Value;
+                if (typeOne != null)
+                    P.SizeUSB = typeOne.Value;
+                if (typeTry != null)
+                    P.SpeedUSB = typeTry.Value;
+
+                list[number] = P;
             }
             else if (list[number] is DVD)
             {
@@ -82,6 +86,12 @@ namespace MemoreNET
                 if (price != null)
                     P.Price = price.Value;
 
+                if (typeOne != null)
+                    P.Speadload = typeOne.Value;
+                if (typeTry != null)
+                    P.SpeadSave = typeTry.Value;
+
+                list[number] = P;
             }
         }
         public void Print(ILog log)
