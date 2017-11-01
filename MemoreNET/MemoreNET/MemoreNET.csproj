@@ -36,6 +36,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISerilize\BinarySerialize.cs" />
+    <Compile Include="ISerilize\ISerialize.cs" />
+    <Compile Include="ISerilize\JsonSerialize.cs" />
+    <Compile Include="ISerilize\XMLSerialize.cs" />
     <Compile Include="LOG\ConsoleLog.cs" />
     <Compile Include="Iterfase.cs" />
     <Compile Include="STOREGE\DVD.cs" />
