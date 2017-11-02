@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemoreNET.ISerilize
+namespace MemoreNET.ISerialize
 {
-    class BinarySerialize : ISerialize
+    class JsonSerialize
     {
     }
 }

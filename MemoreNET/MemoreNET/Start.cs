@@ -58,10 +58,10 @@ namespace MemoreNET
 
                             break;
                     case 5://Search
-                        //Console.Clear();
-                        //cont.Serch();
+                            Console.Clear();
+                            cont.Serch();
 
-                        break;
+                            break;
                     case 6:
 
                         //cont.Save();

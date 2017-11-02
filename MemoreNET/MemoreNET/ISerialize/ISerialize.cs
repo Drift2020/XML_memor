@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemoreNET.ISerilize
+namespace MemoreNET.ISerialize
 {
-    public interface ISerialize
+    interface ISerialize
     {
-
+        void Save(List<Storage> list);
     }
 }

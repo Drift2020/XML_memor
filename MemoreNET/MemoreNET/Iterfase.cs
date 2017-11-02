@@ -770,8 +770,8 @@ namespace MemoreNET
         void SerchDVD()
         {
             SerchStart();
-            Console.WriteLine("6.SizeP");
-            Console.WriteLine("7.SpeedHDD");
+            Console.WriteLine("6.Spead load");
+            Console.WriteLine("7.Spead save");
 
             Console.WriteLine("8.Exit");
             Console.Write("Please enter value: ");
@@ -801,60 +801,25 @@ namespace MemoreNET
                 case 4:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    OBJ
+                    OBJ.SerchQuantity(new DVD(), number);
                     break;
 
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            if (P.Price == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchPrice(new DVD(), number);
                     break;
 
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            DVD Tem = P as DVD;
-                            if (Tem.Speadload == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeadload(number);
                     break;
 
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            DVD Tem = P as DVD;
-                            if (Tem.SpeadSave == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeadsave(number);
                     break;
 
 

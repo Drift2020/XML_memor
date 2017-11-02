@@ -475,19 +475,48 @@ namespace MemoreNET
             }
         }
 
-            public void Serch
-            public void Serch
-
-
-
-
-
-
-
-
-
+        public void SerchSpeadload(int Speadload)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is DVD)
+                {
+                    DVD Tem = P as DVD;
+                    if (Tem.Speadload == Speadload)
+                    {
+                      
+                        P.Print(new ConsoleLog());
+                       
+                    }
+                }
+            }
+        }
+        public void SerchSpeadsave(int Speadsave)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is DVD)
+                {
+                    DVD Tem = P as DVD;
+                    if (Tem.SpeadSave == Speadsave)
+                    {
+                        P.Print(new ConsoleLog());
+                    }
+                }
+            }
+        }
 
         #endregion
+
+        public void Save()
+        {
+
+        }
+
+        public void Load()
+        {
+
+        }
         public void Print(ILog log)
         {
             foreach(Storage i in list)
