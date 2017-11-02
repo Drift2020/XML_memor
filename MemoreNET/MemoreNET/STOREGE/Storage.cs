@@ -8,6 +8,7 @@ namespace MemoreNET
 {
     abstract public class Storage
     {
+      
         public Storage()
         {
             Name = null;
@@ -18,6 +19,7 @@ namespace MemoreNET
         }
         public Storage(string Name, string ManufacturerName, string Model, int Size, int Price)
         {
+          
             this.Name = Name;
             this.ManufacturerName = ManufacturerName;
             this.Model = Model;
