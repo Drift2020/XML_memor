@@ -9,5 +9,7 @@ namespace MemoreNET.ISerialize
     interface ISerialize
     {
         void Save(List<Storage> list);
+
+        List<Storage> Load();
     }
 }

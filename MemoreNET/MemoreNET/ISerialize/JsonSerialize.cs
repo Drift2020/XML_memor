@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace MemoreNET.ISerialize
 {
-    class JsonSerialize
+    class JsonSerialize : ISerialize
     {
+        public void Save(List<Storage> list)
+        {
+
+        }
+
+        public List<Storage> Load()
+        {
+            return null;
+        }
     }
 }
