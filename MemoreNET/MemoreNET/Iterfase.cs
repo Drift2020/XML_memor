@@ -143,16 +143,7 @@ namespace MemoreNET
 
                     break;
             }
-
-
-            //int i = 1;
-            //foreach (Storage P in OBJ)
-            //{
-            //    Console.WriteLine(i++);
-            //    P.Print();
-            //    Console.WriteLine();
-            //}
-            //Console.WriteLine("7.Menu");
+            Console.WriteLine("\n7.Menu");
         }
         #region EDIT
         void EditStart()
@@ -441,781 +432,616 @@ namespace MemoreNET
             
         }
         #endregion
-        //#region DELL
-        //        void SelectCriterDelite()
-        //        {
-        //            Console.WriteLine("1.Type");
-        //            Console.WriteLine("2.Manufacturer name");
-        //            Console.WriteLine("3.Model");
-        //            Console.WriteLine("4.Quantity");
-        //            Console.WriteLine("5.Price");
-
-        //            Console.WriteLine("6.Spead load");
-        //            Console.WriteLine("7.Spead save");
-
-        //            Console.WriteLine("8.Size USB");
-        //            Console.WriteLine("9.Speed USB");
-
-        //            Console.WriteLine("10.Size");
-        //            Console.WriteLine("11.Speed HDD");
-
-        //            Console.WriteLine("12.Exit");
-        //        }
-        //        void DeliteManufacturerName()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter manufacturer name to delite: ");
-        //            string Temp = Console.ReadLine();
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (String.Compare(OBJ[i].ManufacturerName, Temp) == 0)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-        //        void DeliteUSB()
-        //        {
-
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is USB)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-        //        void DeliteHDD()
-        //        {
-
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is HDD)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-        //        void DeliteDVD()
-        //        {
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is DVD)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-        //        void DeliteType()
-        //        {
-        //            selection();
-        //            int number = 0;
-        //            SelectCriterDelite();
-        //            number = Convert.ToInt32(Console.ReadLine());
-        //            switch (number)
-        //            {
-        //                case 1:
-        //                    DeliteUSB();
-        //                    break;
-        //                case 2:
-        //                    DeliteHDD();
-        //                    break;
-        //                case 3:
-        //                    DeliteDVD();
-        //                    break;
-        //            }
-
-        //        }
-        //        void DeliteModel()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter model to delite: ");
-        //            string Temp = Console.ReadLine();
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (String.Compare(OBJ[i].Model, Temp) == 0)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-        //        void DeliteQuantity()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter quantity to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i].Size== Temp)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-        //        void DelitePrice()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter price to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i].Size == Temp)
-        //                {
-        //                    OBJ.Remove(OBJ[i]);
-        //                    i = 0;
-        //                }
-        //            }
-        //        }
-
-        //        void DeliteSpeadLoad()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter spead load to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if(OBJ[i] is DVD)
-        //                {
-        //                    DVD P  = OBJ[i] as DVD ;
-        //                    if (P.Speadload == Temp)
-        //                    {
-        //                        OBJ.Remove(OBJ[i]);
-        //                        i = 0;
-        //                    }
-        //                }
-
-        //            }
-        //        }
-        //        void DeliteSpeadSave()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter spead save to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is DVD)
-        //                {
-        //                    DVD P = OBJ[i] as DVD;
-        //                    if (P.SpeadSave == Temp)
-        //                    {
-        //                        OBJ.Remove(OBJ[i]);
-        //                        i = 0;
-        //                    }
-        //                }
-
-        //            }
-        //        }
-
-        //        void DeliteSizeP()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter size to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is HDD)
-        //                {
-        //                    HDD P = OBJ[i] as HDD;
-        //                    if (P.SizeP == Temp)
-        //                    {
-        //                        OBJ.Remove(OBJ[i]);
-        //                        i = 0;
-        //                    }
-        //                }
-
-        //            }
-        //        }
-        //        void DeliteSpeedHDD()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter speed HDD to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is HDD)
-        //                {
-        //                    HDD P = OBJ[i] as HDD;
-        //                    if (P.SizeP == Temp)
-        //                    {
-        //                        OBJ.Remove(OBJ[i]);
-        //                        i = 0;
-        //                    }
-        //                }
-
-        //            }
-        //        }
-
-        //        void DeliteSizeUSB()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter size USB to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is USB)
-        //                {
-        //                    USB P = OBJ[i] as USB;
-        //                    if (P.SizeUSB == Temp)
-        //                    {
-        //                        OBJ.Remove(OBJ[i]);
-        //                        i = 0;
-        //                    }
-        //                }
-
-        //            }
-        //        }
-        //        void DeliteSpeedUSB()
-        //        {
-        //            Console.Clear();
-        //            Console.Write("Please, enter speed USB to delite: ");
-        //            int Temp = Convert.ToInt32(Console.ReadLine());
-        //            for (int i = 0; i < OBJ.Count; i++)
-        //            {
-        //                if (OBJ[i] is USB)
-        //                {
-        //                    USB P = OBJ[i] as USB;
-        //                    if (P.SizeUSB == Temp)
-        //                    {
-        //                        OBJ.Remove(OBJ[i]);
-        //                        i = 0;
-        //                    }
-        //                }
-
-        //            }
-        //        }
-
-        //        public void Delite()
-        //        {
-        //            int number = 0;
-        //            SelectCriterDelite();
-        //            number = Convert.ToInt32(Console.ReadLine());
-        //            switch (number)
-        //            {
-        //                case 1:
-        //                    Console.Clear();
-        //                    DeliteType();
-
-        //                    break;
-        //                case 2:
-        //                    Console.Clear();
-        //                    DeliteManufacturerName();
-
-        //                    break;
-        //                case 3:
-        //                    Console.Clear();
-        //                    DeliteModel();
-
-        //                    break;
-        //                case 4:
-        //                    Console.Clear();
-        //                    DeliteQuantity();
-
-        //                    break;
-        //                case 5:
-        //                    Console.Clear();
-        //                    DelitePrice();
-
-        //                    break;
-        //                case 6:
-        //                    Console.Clear();
-        //                    DeliteSpeadLoad();
-
-        //                    break;
-        //                case 7:
-        //                    Console.Clear();
-        //                    DeliteSpeadSave();
-
-        //                    break;
-        //                case 8:
-        //                    Console.Clear();
-        //                    DeliteSizeUSB();
-
-        //                    break;
-        //                case 9:
-        //                    Console.Clear();
-        //                    DeliteSpeedUSB();
-
-        //                    break;
-        //                case 10:
-        //                    Console.Clear();
-        //                    DeliteSizeP();
-
-        //                    break;
-        //                case 11:
-        //                    Console.Clear();
-        //                    DeliteSpeedHDD();
-
-        //                    break;
-        //                case 12:
-
-
-
-        //                    return;
-        //            }
-        //        }
-        //        #endregion
-        //#region SERCH
-        //        void SerchStart()
-        //        {
-        //            Console.WriteLine("What  pararam you serch?");
-        //            Console.WriteLine("1.Type");
-        //            Console.WriteLine("2.ManufacturerName");
-        //            Console.WriteLine("3.Model");
-        //            Console.WriteLine("4.Quantity");
-        //            Console.WriteLine("5.Price");
-        //        }      
-        //        void SerchUSB()
-        //        {
-        //           SerchStart();
-        //            Console.WriteLine("6.SizeUSB");
-        //            Console.WriteLine("7.SpeedUSB");
-
-        //            Console.WriteLine("8.Exit");
-        //            Console.Write("Please enter value: ");
-        //            int number=Convert.ToInt32(Console.ReadLine());
-        //            Console.Clear();
-
-        //            string temp = null;
-        //            int i = 1;
-        //            switch (number)
-        //            {
-        //                case 1:
-
-
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if(P is USB)
-        //                        {                      
-
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 2:
-        //                    Console.Write("Please enter value: ");
-        //                    temp = Console.ReadLine();
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is USB)
-        //                        {
-        //                            if (String.Compare(P.ManufacturerName, temp) == 0)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 3:
-        //                    Console.Write("Please enter value: ");
-        //                    temp = Console.ReadLine();
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is USB)
-        //                        {
-        //                            if (String.Compare(P.Model, temp) == 0)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 4:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is USB)
-        //                        {
-        //                            if (P.Size==number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 5:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is USB)
-        //                        {
-        //                            if (P.Price == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 6:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is USB)
-        //                        {
-        //                            USB Tem = P as USB;
-        //                            if (Tem.SizeUSB == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 7:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());                 
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is USB)
-        //                        {
-        //                            USB Tem = P as USB;
-        //                            if (Tem.SpeedUSB == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-
-
-        //                case 8:
-        //                    return;
-
-        //            }
-        //        }
-        //        void SerchHDD()
-        //        {
-        //            SerchStart();
-        //            Console.WriteLine("6.SizeP");
-        //            Console.WriteLine("7.SpeedHDD");
-
-        //            Console.WriteLine("8.Exit");
-        //            Console.Write("Please enter value: ");
-        //            int number = Convert.ToInt32(Console.ReadLine());
-        //            Console.Clear();
-        //            string temp = null;
-        //            int i = 1;
-        //            switch (number)
-        //            {
-        //                case 1:
-
-
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 2:
-        //                    Console.Write("Please enter value: ");
-        //                    temp = Console.ReadLine();
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-        //                            if (String.Compare(P.ManufacturerName, temp) == 0)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 3:
-        //                    Console.Write("Please enter value: ");
-        //                    temp = Console.ReadLine();
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-        //                            if (String.Compare(P.Model, temp) == 0)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 4:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-        //                            if (P.Size == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 5:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-        //                            if (P.Price == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 6:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-        //                            HDD Tem = P as HDD;
-        //                            if (Tem.SizeP == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 7:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is HDD)
-        //                        {
-        //                            HDD Tem = P as HDD;
-        //                            if (Tem.SpeedHDD == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-
-
-        //                case 8:
-        //                    return;
-
-        //            }
-        //        }
-        //        void SerchDVD()
-        //        {
-        //            SerchStart();
-        //            Console.WriteLine("6.SizeP");
-        //            Console.WriteLine("7.SpeedHDD");
-
-        //            Console.WriteLine("8.Exit");
-        //            Console.Write("Please enter value: ");
-        //            int number = Convert.ToInt32(Console.ReadLine());
-        //            Console.Clear();
-        //            string temp = null;
-        //            int i = 1;
-        //            switch (number)
-        //            {
-        //                case 1:
-
-
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 2:
-        //                    Console.Write("Please enter value: ");
-        //                    temp = Console.ReadLine();
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-        //                            if (String.Compare(P.ManufacturerName, temp) == 0)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 3:
-        //                    Console.Write("Please enter value: ");
-        //                    temp = Console.ReadLine();
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-        //                            if (String.Compare(P.Model, temp) == 0)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 4:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-        //                            if (P.Size == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 5:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-        //                            if (P.Price == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 6:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-        //                            DVD Tem = P as DVD;
-        //                            if (Tem.Speadload == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-        //                case 7:
-        //                    Console.Write("Please enter value: ");
-        //                    number = Convert.ToInt32(Console.ReadLine());
-        //                    foreach (Storage P in OBJ)
-        //                    {
-        //                        if (P is DVD)
-        //                        {
-        //                            DVD Tem = P as DVD;
-        //                            if (Tem.SpeadSave == number)
-        //                            {
-        //                                Console.WriteLine(i++);
-        //                                P.Print();
-        //                                Console.WriteLine();
-        //                            }
-        //                        }
-        //                    }
-        //                    break;
-
-
-
-        //                case 8:
-        //                    return;
-
-        //            }
-        //        }
-        //        public void Serch()
-        //        {
-        //            selection();
-        //            int number = Convert.ToInt32(Console.ReadLine());
-        //            switch (number)
-        //            {
-        //                case 1:
-        //                    Console.Clear();
-        //                    SerchUSB();
-        //                    break;
-        //                case 2:
-        //                    Console.Clear();
-        //                    SerchHDD();
-        //                    break;
-        //                case 3:
-        //                    Console.Clear();
-        //                    SerchDVD();
-        //                    break;
-        //            }
-        //            Console.WriteLine("7.Menu");
-        //        }
-        //#endregion
+        #region DELL
+        void SelectCriterDelite()
+        {
+            Console.WriteLine("1.Type");
+            Console.WriteLine("2.Manufacturer name");
+            Console.WriteLine("3.Model");
+            Console.WriteLine("4.Quantity");
+            Console.WriteLine("5.Price");
+
+            Console.WriteLine("6.Spead load");
+            Console.WriteLine("7.Spead save");
+
+            Console.WriteLine("8.Size USB");
+            Console.WriteLine("9.Speed USB");
+
+            Console.WriteLine("10.Size");
+            Console.WriteLine("11.Speed HDD");
+
+            Console.WriteLine("12.Exit");
+        }
+        void DeliteManufacturerName()
+        {
+            Console.Clear();
+            Console.Write("Please, enter manufacturer name to delite: ");
+            string Temp = Console.ReadLine();
+
+            OBJ.DeliteManufacturerName(Temp);
+        }
+        void DeliteUSB()
+        {
+            OBJ.DeliteAllUSB();
+        }
+        void DeliteHDD()
+        {
+            OBJ.DeliteAllHDD();
+        }
+        void DeliteDVD()
+        {
+            OBJ.DeliteAllDVD();
+        }
+        void DeliteType()
+        {
+            selection();
+            int number = 0;
+            SelectCriterDelite();
+            number = Convert.ToInt32(Console.ReadLine());
+            switch (number)
+            {
+                case 1:
+                    DeliteUSB();
+                    break;
+                case 2:
+                    DeliteHDD();
+                    break;
+                case 3:
+                    DeliteDVD();
+                    break;
+            }
+
+        }
+        void DeliteModel()
+        {
+            Console.Clear();
+            Console.Write("Please, enter model to delite: ");
+            string Temp = Console.ReadLine();
+            OBJ.DeliteModel(Temp);
+        }
+        void DeliteQuantity()
+        {
+            Console.Clear();
+            Console.Write("Please, enter quantity to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteQuantity(Temp);
+        }
+        void DelitePrice()
+        {
+            Console.Clear();
+            Console.Write("Please, enter price to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DelitePrice(Temp);
+        }
+
+        void DeliteSpeadLoad()
+        {
+            Console.Clear();
+            Console.Write("Please, enter spead load to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteSpeadLoad(Temp);
+        }
+        void DeliteSpeadSave()
+        {
+            Console.Clear();
+            Console.Write("Please, enter spead save to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteSpeadSave(Temp);
+        }
+
+        void DeliteSizeP()
+        {
+            Console.Clear();
+            Console.Write("Please, enter size to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteSizeP(Temp);
+        }
+        void DeliteSpeedHDD()
+        {
+            Console.Clear();
+            Console.Write("Please, enter speed HDD to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteSpeedHDD(Temp);
+        }
+
+        void DeliteSizeUSB()
+        {
+            Console.Clear();
+            Console.Write("Please, enter size USB to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteSizeUSB(Temp);
+        }
+        void DeliteSpeedUSB()
+        {
+            Console.Clear();
+            Console.Write("Please, enter speed USB to delite: ");
+            int Temp = Convert.ToInt32(Console.ReadLine());
+            OBJ.DeliteSpeedUSB(Temp);
+        }
+
+        public void Delite()
+        {
+            int number = 0;
+            SelectCriterDelite();
+            number = Convert.ToInt32(Console.ReadLine());
+            switch (number)
+            {
+                case 1:
+                    Console.Clear();
+                    DeliteType();
+
+                    break;
+                case 2:
+                    Console.Clear();
+                    DeliteManufacturerName();
+
+                    break;
+                case 3:
+                    Console.Clear();
+                    DeliteModel();
+
+                    break;
+                case 4:
+                    Console.Clear();
+                    DeliteQuantity();
+
+                    break;
+                case 5:
+                    Console.Clear();
+                    DelitePrice();
+
+                    break;
+                case 6:
+                    Console.Clear();
+                    DeliteSpeadLoad();
+
+                    break;
+                case 7:
+                    Console.Clear();
+                    DeliteSpeadSave();
+
+                    break;
+                case 8:
+                    Console.Clear();
+                    DeliteSizeUSB();
+
+                    break;
+                case 9:
+                    Console.Clear();
+                    DeliteSpeedUSB();
+
+                    break;
+                case 10:
+                    Console.Clear();
+                    DeliteSizeP();
+
+                    break;
+                case 11:
+                    Console.Clear();
+                    DeliteSpeedHDD();
+
+                    break;
+                case 12:
+
+
+
+                    return;
+            }
+        }
+        #endregion
+        #region SERCH
+        void SerchStart()
+        {
+            Console.WriteLine("What  pararam you serch?");
+            Console.WriteLine("1.Type");
+            Console.WriteLine("2.ManufacturerName");
+            Console.WriteLine("3.Model");
+            Console.WriteLine("4.Quantity");
+            Console.WriteLine("5.Price");
+        }
+        void SerchUSB()
+        {
+            SerchStart();
+            Console.WriteLine("6.SizeUSB");
+            Console.WriteLine("7.SpeedUSB");
+
+            Console.WriteLine("8.Exit");
+            Console.Write("Please enter value: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            string temp = null;
+            int i = 1;
+            switch (number)
+            {
+                case 1:
+
+
+                    OBJ.SerchType(new USB());
+                    break;
+
+                case 2:
+                    Console.Write("Please enter value: ");
+                    temp = Console.ReadLine();
+                    OBJ.SerchManufacturerName(new USB(), temp);
+                    break;
+
+                case 3:
+                    Console.Write("Please enter value: ");
+                    temp = Console.ReadLine();
+                    OBJ.SerchModel(new USB(), temp);
+                    break;
+
+                case 4:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    OBJ.SerchQuantity(new USB(), number);
+                    break;
+
+                case 5:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is USB)
+                        {
+                            if (P.Price == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 6:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is USB)
+                        {
+                            USB Tem = P as USB;
+                            if (Tem.SizeUSB == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 7:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is USB)
+                        {
+                            USB Tem = P as USB;
+                            if (Tem.SpeedUSB == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+
+
+                case 8:
+                    return;
+
+            }
+        }
+        void SerchHDD()
+        {
+            SerchStart();
+            Console.WriteLine("6.SizeP");
+            Console.WriteLine("7.SpeedHDD");
+
+            Console.WriteLine("8.Exit");
+            Console.Write("Please enter value: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            string temp = null;
+            int i = 1;
+            switch (number)
+            {
+                case 1:
+
+
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+
+                            Console.WriteLine(i++);
+                            P.Print();
+                            Console.WriteLine();
+
+                        }
+                    }
+                    break;
+
+                case 2:
+                    Console.Write("Please enter value: ");
+                    temp = Console.ReadLine();
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+                            if (String.Compare(P.ManufacturerName, temp) == 0)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 3:
+                    Console.Write("Please enter value: ");
+                    temp = Console.ReadLine();
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+                            if (String.Compare(P.Model, temp) == 0)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 4:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+                            if (P.Size == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 5:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+                            if (P.Price == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 6:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+                            HDD Tem = P as HDD;
+                            if (Tem.SizeP == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 7:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is HDD)
+                        {
+                            HDD Tem = P as HDD;
+                            if (Tem.SpeedHDD == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+
+
+                case 8:
+                    return;
+
+            }
+        }
+        void SerchDVD()
+        {
+            SerchStart();
+            Console.WriteLine("6.SizeP");
+            Console.WriteLine("7.SpeedHDD");
+
+            Console.WriteLine("8.Exit");
+            Console.Write("Please enter value: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            string temp = null;
+            int i = 1;
+            switch (number)
+            {
+                case 1:
+
+
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+
+                            Console.WriteLine(i++);
+                            P.Print();
+                            Console.WriteLine();
+
+                        }
+                    }
+                    break;
+
+                case 2:
+                    Console.Write("Please enter value: ");
+                    temp = Console.ReadLine();
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+                            if (String.Compare(P.ManufacturerName, temp) == 0)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 3:
+                    Console.Write("Please enter value: ");
+                    temp = Console.ReadLine();
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+                            if (String.Compare(P.Model, temp) == 0)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 4:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+                            if (P.Size == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 5:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+                            if (P.Price == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 6:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+                            DVD Tem = P as DVD;
+                            if (Tem.Speadload == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+                case 7:
+                    Console.Write("Please enter value: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    foreach (Storage P in OBJ)
+                    {
+                        if (P is DVD)
+                        {
+                            DVD Tem = P as DVD;
+                            if (Tem.SpeadSave == number)
+                            {
+                                Console.WriteLine(i++);
+                                P.Print();
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    break;
+
+
+
+                case 8:
+                    return;
+
+            }
+        }
+        public void Serch()
+        {
+            selection();
+            int number = Convert.ToInt32(Console.ReadLine());
+            switch (number)
+            {
+                case 1:
+                    Console.Clear();
+                    SerchUSB();
+                    break;
+                case 2:
+                    Console.Clear();
+                    SerchHDD();
+                    break;
+                case 3:
+                    Console.Clear();
+                    SerchDVD();
+                    break;
+            }
+            Console.WriteLine("7.Menu");
+        }
+        #endregion
         //public void Save()
         //{
         //    FileStream file = new FileStream("1.txt", FileMode.Create, FileAccess.Write);

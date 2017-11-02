@@ -33,13 +33,13 @@ namespace MemoreNET
                         break;
                     case 2://Dell
 
-                      //  Console.Clear();
+                            Console.Clear();
 
-                      // cont.Delite();
-                      //Console.Clear();
-                      //  cont.PrintMenu();
+                            cont.Delite();
+                            Console.Clear();
+                            cont.PrintMenu();
 
-                        break;
+                            break;
                     case 3://print
 
                         Console.Clear();
@@ -65,17 +65,12 @@ namespace MemoreNET
                     case 6:
 
                         //cont.Save();
-                        return;
+                        return;                  
 
-
-                    case 7:
-                        //Console.Clear();
-                        //cont.PrintMenu();
+                    default:
+                         Console.Clear();
+                         cont.PrintMenu();
                         break;
-                        default:
-                            Console.Clear();
-                            cont.PrintMenu();
-                            break;
                     }
                 }catch (Exception ex) { Console.Clear(); Console.WriteLine(ex); }
         } while (true);
