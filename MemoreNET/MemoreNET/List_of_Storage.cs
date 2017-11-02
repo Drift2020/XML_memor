@@ -508,15 +508,16 @@ namespace MemoreNET
 
         #endregion
 
-        public void Save()
+        public void Save(ISerialize log)
         {
 
         }
 
-        public void Load()
+        public void Load(ISerialize log)
         {
 
         }
+
         public void Print(ILog log)
         {
             foreach(Storage i in list)

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemoreNET.ISerialize
+namespace MemoreNET
 {
-    interface ISerialize
+    public interface ISerialize
     {
         void Save(List<Storage> list);
 
