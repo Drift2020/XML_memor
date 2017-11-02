@@ -379,8 +379,145 @@ namespace MemoreNET
                 }
             }
         }
+        public void SerchPrice(Storage obj, int price)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is USB && obj is USB)
+                {
+                    if (P.Price == price)
+                    {
+                        
+                        P.Print(new ConsoleLog());
+                       
+                    }
+                }
+                else if (P is DVD && obj is DVD)
+                {
+                    if (P.Price == price)
+                    {
+
+                        P.Print(new ConsoleLog());
+
+                    }
+                }
+                else if (P is HDD && obj is HDD)
+                {
+                    if (P.Price == price)
+                    {
+
+                        P.Print(new ConsoleLog());
+
+                    }
+                }
+            }
+        }
+        
+        public void SerchSizeUSB(int sizeUSB)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is USB)
+                {
+                    USB Tem = P as USB;
+                    if (Tem.SizeUSB == sizeUSB)
+                    {
+                       
+                        P.Print(new ConsoleLog());
+                      
+                    }
+                }
+            }
+        }
+        public void SerchSpeedUSB(int SpeedUSB)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is USB)
+                {
+                    USB Tem = P as USB;
+                    if (Tem.SpeedUSB == SpeedUSB)
+                    {
+                       
+                        P.Print(new ConsoleLog());
+                       
+                    }
+                }
+            }
+        }
+
+        public void SerchSizeP(int SizeP)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is HDD)
+                {
+                    HDD Tem = P as HDD;
+                    if (Tem.SizeP == SizeP)
+                    {                     
+                        P.Print(new ConsoleLog());                      
+                    }
+                }
+            }
+        }
+        public void SerchSpeedHDD(int speedHDD)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is HDD)
+                {
+                    HDD Tem = P as HDD;
+                    if (Tem.SpeedHDD == speedHDD)
+                    {
+                        P.Print(new ConsoleLog());
+                    }
+                }
+            }
+        }
+
+        public void SerchSpeadload(int Speadload)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is DVD)
+                {
+                    DVD Tem = P as DVD;
+                    if (Tem.Speadload == Speadload)
+                    {
+                      
+                        P.Print(new ConsoleLog());
+                       
+                    }
+                }
+            }
+        }
+        public void SerchSpeadsave(int Speadsave)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is DVD)
+                {
+                    DVD Tem = P as DVD;
+                    if (Tem.SpeadSave == Speadsave)
+                    {
+                        P.Print(new ConsoleLog());
+                    }
+                }
+            }
+        }
 
         #endregion
+
+        public void Save(ISerialize log)
+        {
+
+        }
+
+        public void Load(ISerialize log)
+        {
+
+        }
+
         public void Print(ILog log)
         {
             foreach(Storage i in list)

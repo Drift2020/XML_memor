@@ -681,54 +681,20 @@ namespace MemoreNET
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is USB)
-                        {
-                            if (P.Price == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchPrice(new USB(), number);
+
                     break;
 
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is USB)
-                        {
-                            USB Tem = P as USB;
-                            if (Tem.SizeUSB == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSizeUSB(number);
                     break;
 
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is USB)
-                        {
-                            USB Tem = P as USB;
-                            if (Tem.SpeedUSB == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeedUSB(number);
                     break;
 
 
@@ -755,121 +721,43 @@ namespace MemoreNET
                 case 1:
 
 
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-
-                            Console.WriteLine(i++);
-                            P.Print();
-                            Console.WriteLine();
-
-                        }
-                    }
+                    OBJ.SerchType(new HDD());
                     break;
 
                 case 2:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-                            if (String.Compare(P.ManufacturerName, temp) == 0)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchManufacturerName(new HDD(), temp);
                     break;
 
                 case 3:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-                            if (String.Compare(P.Model, temp) == 0)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchModel(new HDD(), temp);
                     break;
 
                 case 4:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-                            if (P.Size == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchQuantity(new HDD(), number);
                     break;
 
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-                            if (P.Price == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchPrice(new HDD(), number);
                     break;
 
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-                            HDD Tem = P as HDD;
-                            if (Tem.SizeP == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSizeP(number);
                     break;
 
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is HDD)
-                        {
-                            HDD Tem = P as HDD;
-                            if (Tem.SpeedHDD == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeedHDD(number);
                     break;
 
 
@@ -882,8 +770,8 @@ namespace MemoreNET
         void SerchDVD()
         {
             SerchStart();
-            Console.WriteLine("6.SizeP");
-            Console.WriteLine("7.SpeedHDD");
+            Console.WriteLine("6.Spead load");
+            Console.WriteLine("7.Spead save");
 
             Console.WriteLine("8.Exit");
             Console.Write("Please enter value: ");
@@ -895,122 +783,43 @@ namespace MemoreNET
             {
                 case 1:
 
-
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-
-                            Console.WriteLine(i++);
-                            P.Print();
-                            Console.WriteLine();
-
-                        }
-                    }
+                    OBJ.SerchType(new DVD());
                     break;
 
                 case 2:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            if (String.Compare(P.ManufacturerName, temp) == 0)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchManufacturerName(new DVD(),temp);
                     break;
 
                 case 3:
                     Console.Write("Please enter value: ");
                     temp = Console.ReadLine();
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            if (String.Compare(P.Model, temp) == 0)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchModel(new DVD(), temp);
                     break;
 
                 case 4:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            if (P.Size == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchQuantity(new DVD(), number);
                     break;
 
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            if (P.Price == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchPrice(new DVD(), number);
                     break;
 
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            DVD Tem = P as DVD;
-                            if (Tem.Speadload == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeadload(number);
                     break;
 
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is DVD)
-                        {
-                            DVD Tem = P as DVD;
-                            if (Tem.SpeadSave == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeadsave(number);
                     break;
 
 
