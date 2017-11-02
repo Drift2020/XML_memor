@@ -429,7 +429,6 @@ namespace MemoreNET
                 }
             }
         }
-
         public void SerchSpeedUSB(int SpeedUSB)
         {
             foreach (Storage P in list)
@@ -447,12 +446,36 @@ namespace MemoreNET
             }
         }
 
-            public void Serch
+        public void SerchSizeP(int SizeP)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is HDD)
+                {
+                    HDD Tem = P as HDD;
+                    if (Tem.SizeP == SizeP)
+                    {                     
+                        P.Print(new ConsoleLog());                      
+                    }
+                }
+            }
+        }
+        public void SerchSpeedHDD(int speedHDD)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is HDD)
+                {
+                    HDD Tem = P as HDD;
+                    if (Tem.SpeedHDD == speedHDD)
+                    {
+                        P.Print(new ConsoleLog());
+                    }
+                }
+            }
+        }
 
             public void Serch
-
-            public void Serch
-
             public void Serch
 
 
