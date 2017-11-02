@@ -379,6 +379,90 @@ namespace MemoreNET
                 }
             }
         }
+        public void SerchPrice(Storage obj, int price)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is USB && obj is USB)
+                {
+                    if (P.Price == price)
+                    {
+                        
+                        P.Print(new ConsoleLog());
+                       
+                    }
+                }
+                else if (P is DVD && obj is DVD)
+                {
+                    if (P.Price == price)
+                    {
+
+                        P.Print(new ConsoleLog());
+
+                    }
+                }
+                else if (P is HDD && obj is HDD)
+                {
+                    if (P.Price == price)
+                    {
+
+                        P.Print(new ConsoleLog());
+
+                    }
+                }
+            }
+        }
+        
+        public void SerchSizeUSB(int sizeUSB)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is USB)
+                {
+                    USB Tem = P as USB;
+                    if (Tem.SizeUSB == sizeUSB)
+                    {
+                       
+                        P.Print(new ConsoleLog());
+                      
+                    }
+                }
+            }
+        }
+
+        public void SerchSpeedUSB(int SpeedUSB)
+        {
+            foreach (Storage P in list)
+            {
+                if (P is USB)
+                {
+                    USB Tem = P as USB;
+                    if (Tem.SpeedUSB == SpeedUSB)
+                    {
+                       
+                        P.Print(new ConsoleLog());
+                       
+                    }
+                }
+            }
+        }
+
+            public void Serch
+
+            public void Serch
+
+            public void Serch
+
+            public void Serch
+
+
+
+
+
+
+
+
+
 
         #endregion
         public void Print(ILog log)

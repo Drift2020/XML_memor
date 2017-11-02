@@ -681,54 +681,20 @@ namespace MemoreNET
                 case 5:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is USB)
-                        {
-                            if (P.Price == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchPrice(new USB(), number);
+
                     break;
 
                 case 6:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is USB)
-                        {
-                            USB Tem = P as USB;
-                            if (Tem.SizeUSB == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSizeUSB(number);
                     break;
 
                 case 7:
                     Console.Write("Please enter value: ");
                     number = Convert.ToInt32(Console.ReadLine());
-                    foreach (Storage P in OBJ)
-                    {
-                        if (P is USB)
-                        {
-                            USB Tem = P as USB;
-                            if (Tem.SpeedUSB == number)
-                            {
-                                Console.WriteLine(i++);
-                                P.Print();
-                                Console.WriteLine();
-                            }
-                        }
-                    }
+                    OBJ.SerchSpeedUSB(number);
                     break;
 
 
