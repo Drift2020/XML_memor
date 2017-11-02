@@ -4,11 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
 namespace MemoreNET
 {
-    class HDD:Storage
+    [Serializable(), XmlInclude(typeof(USB)), XmlInclude(typeof(DVD)), XmlInclude(typeof(HDD))]
+    [DataContract]
+    public class HDD:Storage
     {
+        [DataMember]
         public int SizeP { get; set; }
+        [DataMember]
         public int SpeedHDD { get; set; }
 
         public HDD()

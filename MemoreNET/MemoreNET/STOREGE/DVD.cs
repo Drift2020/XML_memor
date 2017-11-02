@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
 namespace MemoreNET
 {
-    class DVD : Storage
+    [Serializable(), XmlInclude(typeof(USB)), XmlInclude(typeof(DVD)), XmlInclude(typeof(HDD))]
+    [DataContract]
+    public class DVD : Storage
     {
+        [DataMember]
         public int Speadload{get;set;}
+        [DataMember]
         public int SpeadSave{get;set;}
 
         public DVD()

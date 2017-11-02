@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Storage xsi:type="USB">
+    <Name>USB</Name>
+    <ManufacturerName>1</ManufacturerName>
+    <Model>1</Model>
+    <Size>1</Size>
+    <Price>1</Price>
+    <SizeUSB>1</SizeUSB>
+    <SpeedUSB>1</SpeedUSB>
+  </Storage>
+</ArrayOfStorage>

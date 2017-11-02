@@ -851,58 +851,49 @@ namespace MemoreNET
             Console.WriteLine("7.Menu");
         }
         #endregion
-        //public void Save()
-        //{
-        //    FileStream file = new FileStream("1.txt", FileMode.Create, FileAccess.Write);
-        //    BinaryWriter writer = new BinaryWriter(file);
-        //    writer.Write(OBJ.Count+1);
-        //    foreach (Storage P in OBJ)
-        //    {
-        //        P.Save(writer);
-        //    }
-        //    writer.Close();
-        //    file.Close();
-        //}
-        //public void Load()
-        //{
-        //    FileStream file = new FileStream("1.txt", FileMode.Open, FileAccess.Read);
-        //    BinaryReader reader = new BinaryReader(file);
-        //    try
-        //    {
+        public void Save()
+        {
+            int number = 0;
+            Console.Write("1.Save Binary\n2.Save Json\n3.Save XML\nAny other value - don't save.\nPlease enter value:");
+            number = Int32.Parse(Console.ReadLine());
+            switch(number)
+            {
 
-        //        int size = reader.ReadInt32();
-        //        Storage p;
-        //        for (int i = 0; i < size - 1 && size > 0; i++)
-        //        {
-        //            string LOAD = reader.ReadString();
-        //            if (String.Compare(LOAD, "USB") == 0)
-        //            {
-        //                p = new USB();
-        //                p.Load(reader, LOAD);
-        //                OBJ.Add(p);
-        //            }
-        //            else if (String.Compare(LOAD, "DVD") == 0)
-        //            {
-        //                p = new DVD();
-        //                p.Load(reader, LOAD);
-        //                OBJ.Add(p);
-        //            }
-        //            else if (String.Compare(LOAD, "HDD") == 0)
-        //            {
-        //                p = new HDD();
-        //                p.Load(reader, LOAD);
-        //                OBJ.Add(p);
-        //            }
-        //        }
-        //    }
-        //    catch
-        //    {
+                case 1:
+                    OBJ.Save(new BinarySerialize());
+                    break;
+                case 2:
+                    OBJ.Save(new JsonSerialize());
+                    break;
+                case 3:
+                    OBJ.Save(new XMLSerialize());
+                    break;
+                default:
+                    break;
+            }
+           
 
-        //    };
+        }
+        public void Load()
+        {
+            int number = 0;
+            Console.Write("1.Load Binary\n2.Load Json\n3.Load XML\nAny other value - don't load.\nPlease enter value:");
+            number = Int32.Parse(Console.ReadLine());
+            switch (number)
+            {
 
-
-        //    reader.Close();
-        //    file.Close();
-        //}
+                case 1:
+                    OBJ.Load(new BinarySerialize());
+                    break;
+                case 2:
+                    OBJ.Load(new JsonSerialize());
+                    break;
+                case 3:
+                    OBJ.Load(new XMLSerialize());
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

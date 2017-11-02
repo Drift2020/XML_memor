@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MemoreNET
 {
+   
     class List_of_Storage
     {
         private List<Storage> list;
@@ -510,12 +511,12 @@ namespace MemoreNET
 
         public void Save(ISerialize log)
         {
-
+            log.Save(list);
         }
 
         public void Load(ISerialize log)
         {
-
+            list = log.Load();
         }
 
         public void Print(ILog log)

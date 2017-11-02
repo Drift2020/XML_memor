@@ -4,8 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
 namespace MemoreNET
 {
+
+    [Serializable(), XmlInclude(typeof(USB)), XmlInclude(typeof(DVD)), XmlInclude(typeof(HDD))]
+    [DataContract]
     public class USB : Storage
     {
         public USB()
@@ -19,7 +25,9 @@ namespace MemoreNET
             this.SizeUSB = SizeUSB;
             this.SpeedUSB = SpeedUSB;
         }
+        [DataMember]
         public int SizeUSB { get; set; }
+        [DataMember]
         public int SpeedUSB { get; set; }
 
         public override void Print(ILog Obj) {

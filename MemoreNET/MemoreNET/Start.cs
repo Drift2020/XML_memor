@@ -12,7 +12,7 @@ namespace MemoreNET
         {
             Iterfase cont=new Iterfase();
             int Number = 0;
-           // cont.Load();
+            cont.Load();
             cont.PrintMenu();
            
             do
@@ -64,7 +64,7 @@ namespace MemoreNET
                             break;
                     case 6:
 
-                        //cont.Save();
+                        cont.Save();
                         return;                  
 
                     default:
